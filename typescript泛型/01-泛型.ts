@@ -1,7 +1,8 @@
-let getArray = (value:number, item:number = 5):number[] =>{
+let getArray = <T>(value:T, item:number = 5):T[] =>{
     return new Array(item).fill(value);
 };
 
-let arr = getArray(6,3);
-console.log(arr);
+let arr = getArray<string>("abc");
+let resH = arr.map(item=>item.length);
+console.log(resH);
 
